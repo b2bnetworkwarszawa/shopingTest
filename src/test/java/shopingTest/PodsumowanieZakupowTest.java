@@ -36,7 +36,7 @@ public class PodsumowanieZakupowTest {
 			ZakupyUtil.waitForAjax(driver);
 			ZakupyUtil.przekierowanieDoKoszyka(driver);
 		}
-		double cenaProduktu = ZakupyUtil.cenaPierwszegoProduktuWKoszyku(driver);
+		double cenaProduktu = ZakupyUtil.policzSumeProduktowWKoszyku(driver);
 		double total = ZakupyUtil.totalSum(driver);
 		// System.out.println(totalD);
 		// System.out.println("TOTAL "+ZakupyUtil.totalSum(driver));

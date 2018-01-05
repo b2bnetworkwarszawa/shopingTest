@@ -107,7 +107,7 @@ public class ZakupyUtil {
 				System.out.println(td.getText());
 			}
 			String unitPrice = el.findElements(By.tagName("td")).get(3).getText();
-			WebElement input = driver.findElement(By.cssSelector("#product_3_13_0_31337 > td.cart_quantity.text-center > input.cart_quantity_input.form-control.grey"));
+			WebElement input = driver.findElement(By.xpath("//*[@id=\"product_1_1_0_31337\"]/td[5]/input[2]"));
 			int mnoznik =Integer.parseInt(input.getAttribute("value"));
 			sumUnitPrice = sumUnitPrice + (Double.parseDouble(unitPrice.substring(1, unitPrice.length()))*mnoznik);
 			System.out.println("unit price "+el.findElements(By.tagName("td")).get(3).getText());

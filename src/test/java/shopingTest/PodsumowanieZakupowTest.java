@@ -17,7 +17,7 @@ public class PodsumowanieZakupowTest {
 
 	@Before
 	public void init() {
-		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "resource/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://automationpractice.com/index.php?");
 	}

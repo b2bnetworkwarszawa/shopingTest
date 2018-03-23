@@ -39,8 +39,11 @@ public class ZakupyUtil {
 	}
 	
 	public static void klikniecieLogowania(WebDriver driver) {
+		////*[@id="header"]/div[2]/div/div/nav/div[2]/a
+		//#header > div.nav > div > div > nav > div:nth-child(2) > a
 		WebElement element = driver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a"));
-		element.click();// developer musi sam wiedzieæ ¿e znaleziony element jest klikalny
+
+		element.click();// developer musi sam wiedzieï¿½ ï¿½e znaleziony element jest klikalny
 
 	}
 
@@ -100,17 +103,17 @@ public class ZakupyUtil {
 	
 	public static double policzSumeProduktowWKoszyku(WebDriver driver) {
 		double sumUnitPrice = 0;
-		for(WebElement el : listaElementowKtoreSaGotoweDoZakupu(driver)) {
+		for(WebElement tr : listaElementowKtoreSaGotoweDoZakupu(driver)) {
 			System.out.println("---------");
-//			System.out.println(el.getText());
-			for(WebElement td : el.findElements(By.tagName("td"))){
+//			System.out.println(tr.getText());
+			for(WebElement td : tr.findElements(By.tagName("td"))){
 				System.out.println(td.getText());
 			}
-			String unitPrice = el.findElements(By.tagName("td")).get(3).getText();
+			String unitPrice = tr.findElements(By.tagName("td")).get(3).getText();
 			WebElement input = driver.findElement(By.xpath("//*[@id=\"product_1_1_0_31337\"]/td[5]/input[2]"));
 			int mnoznik =Integer.parseInt(input.getAttribute("value"));
 			sumUnitPrice = sumUnitPrice + (Double.parseDouble(unitPrice.substring(1, unitPrice.length()))*mnoznik);
-			System.out.println("unit price "+el.findElements(By.tagName("td")).get(3).getText());
+			System.out.println("unit price "+tr.findElements(By.tagName("td")).get(3).getText());
 			
 		}
 		return sumUnitPrice;

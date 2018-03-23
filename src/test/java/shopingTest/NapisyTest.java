@@ -4,13 +4,14 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+
 public class NapisyTest {
 
 	@Test
 	public void czyPierwszaLiteraWNapisieTo4() {
 		String napis = "trawa";
 		String pierwszaLitera = napis.substring(0,1);
-		
+
 		assertEquals("t", pierwszaLitera);
 	}
 	
@@ -60,14 +61,18 @@ public class NapisyTest {
 	public void czyPodanyNapisZawieraLiczbe21() {
 		String cena= "$21";
 		String liczbaString = cena.substring(1);
-		int liczba = Integer.parseInt(liczbaString);	
-		
+		int liczba = Integer.parseInt(liczbaString);
+		Integer liczba2 = null;
+
+//		asse	rt
+//		assertNotNull("liczba nie może być nullem ",liczba2);
 		assertEquals(21, liczba);
 	}
+
 	
 	@Test
 	public void czyPodanyNapisZawieraLiczbe13() {
-		String cena = "cena: 113.12z�";
+		String cena = "cena: 113.12z�";
 		int indexDwukropek = cena.indexOf(":");
 		int indexZ = cena.indexOf("z");
 		String liczbaString = cena.substring(indexDwukropek+2, indexZ);

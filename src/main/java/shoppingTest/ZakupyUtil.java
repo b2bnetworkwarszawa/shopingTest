@@ -1,4 +1,4 @@
-package shopingTest;
+package shoppingTest;
 
 import java.util.List;
 

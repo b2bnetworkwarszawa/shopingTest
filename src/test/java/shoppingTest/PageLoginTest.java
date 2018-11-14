@@ -1,11 +1,11 @@
-package shopingTest;
+package shoppingTest;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
-import shopingTest.pages.LoginPage;
+import shoppingTest.pages.LoginPage;
 
 public class PageLoginTest {
 
